@@ -1,2 +1,12 @@
+sudo rm -rf /home/pi/testes_openvino/testes1/ponte/
+sudo git clone --recurse-submodules https://github.com/fandrealmeida/ponte /home/pi/testes_openvino/testes1/ponte
+sudo mkdir -p /home/pi/testes_openvino/imagens3/
+sudo mv /home/pi/testes_openvino/testes1/ponte/imagens_1000/* /home/pi/testes_openvino/imagens3/
+
+
 # Cenario 1.1: rodando openvino todo em CPU, diretorio com apenas 4 imagens
 sudo python3 /home/pi/openvino_omz//open_model_zoo/demos/face_recognition_demo/python/face_recognition_demo.py -i /home/pi/testes_openvino/testes1/ponte/open_model_zoo_videos/teste2.mp4 -m_fd intel/face-detection-retail-0004/FP32/face-detection-retail-0004.xml -m_lm intel/landmarks-regression-retail-0009/FP32/landmarks-regression-retail-0009.xml -m_reid intel/face-reidentification-retail-0095/FP32/face-reidentification-retail-0095.xml --verbose -fg /home/pi/testes_openvino/imagens1/ -d_fd CPU -d_lm CPU -d_reid CPU
+
+# Cenario 1.2: rodando openvino todo em CPU, diretorio com cerca de 100 imagens
+sudo python3 /home/pi/openvino_omz//open_model_zoo/demos/face_recognition_demo/python/face_recognition_demo.py -i /home/pi/testes_openvino/testes1/ponte/open_model_zoo_videos/teste2.mp4 -m_fd intel/face-detection-retail-0004/FP32/face-detection-retail-0004.xml -m_lm intel/landmarks-regression-retail-0009/FP32/landmarks-regression-retail-0009.xml -m_reid intel/face-reidentification-retail-0095/FP32/face-reidentification-retail-0095.xml --verbose -fg /home/pi/testes_openvino/imagens2/ -d_fd CPU -d_lm CPU -d_reid CPU
+
